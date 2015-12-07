@@ -3,14 +3,13 @@ __author__ = 'gsv'
 from CocomoBasico     import CocomoBasico
 from CocomoIntermedio import CocomoIntermedio
 from CocomoAvanzado   import CocomoAvanzado
+from Util             import Util
 
-
-print("*") * 50
-print("\nBienvenido a estimacion de costos COCOMO\n")
-print("*") * 50
-
+util = Util()
 cocomoBasico = CocomoBasico()
 cocomoIntermedio = CocomoIntermedio()
+
+util.printMessage("Bienvenido a estimacion de costos COCOMO") 
 
 def iniciar():
     msg = 0
@@ -23,9 +22,9 @@ def iniciar():
             cocomoBasico.seleccionar_proyecto()
         elif msg == 2:
             cocomoIntermedio.seleccionar_proyecto()
-    print("*" *50 +
-          "\nGracias por utilizar COCOMO!\n" +
-          "*" * 50)
+    
+    util.printMessage("Gracias por utilizar COCOMO!")
+    
 iniciar()
 
 
